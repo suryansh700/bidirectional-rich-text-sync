@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidirectional Rich Text Sync</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🚀 Bidirectional Rich Text Sync Across Iframes</h1>
+        <p>Real-time synchronization using window.postMessage()</p>
+    </div>
+
+    <div class="editors">
+
+        <div class="frame-card">
+            <div class="frame-title">
+                Frame A Editor
+            </div>
+
+            <iframe id="frameA" src="frameA.html"></iframe>
+        </div>
+
+        <div class="frame-card">
+            <div class="frame-title">
+                Frame B Editor
+            </div>
+
+            <iframe id="frameB" src="frameB.html"></iframe>
+        </div>
+
+    </div>
+
+    <div class="status-card">
+
+        <div id="syncIndicator" class="sync-status">
+            ⚪ Idle
+        </div>
+
+    </div>
+
+    <div class="logs">
+
+        <div class="log-header">
+            📋 Action Log
+        </div>
+
+        <div id="logContainer"></div>
+
+    </div>
+
+    <script src="host.js"></script>
+
+</body>
+
+</html>
